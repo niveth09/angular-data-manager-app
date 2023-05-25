@@ -1,0 +1,26 @@
+<a routerLink="/add-candidate" routerLinkActive="active"
+  ><button nz-button nzType="dashed">Add</button></a
+>
+
+<ul *ngFor="let user of this.data.sharedData; index as id">
+  <ul>
+    <a [routerLink]="['/candidate-details', id + 1]" class="w_underLine">{{
+      user.name
+    }}</a>
+    &nbsp;
+    <a
+      ><button nz-button nzType="primary" (click)="this.data.remove_data(user)">
+        Remove
+      </button></a
+    >
+    &nbsp;
+    <a
+      [routerLink]="['/candidate-details', 'edit-candidate-details', id + 1]"
+      routerLinkActive="active"
+    >
+      <button nz-button nzType="primary" (click)="data.set_index(id)">
+        Edit
+      </button></a
+    >
+  </ul>
+</ul>

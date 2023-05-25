@@ -1,0 +1,33 @@
+<ul *ngIf="this.id">
+  <li>{{ this.id.name }}</li>
+
+  <li>{{ this.id.id }}</li>
+
+  <br />
+  <a
+    ><button nz-button nzType="primary" (click)="this.data.remove_data(user)">
+      Remove
+    </button></a
+  >
+  <br /><br />
+  <a
+    ><button
+      nz-button
+      nzType="primary"
+      (click)="previous()"
+      [disabled]="checkPrevious()"
+    >
+      Previous Candidate
+    </button></a
+  >
+  <a
+    ><button
+      nz-button
+      nzType="primary"
+      (click)="next()"
+      [disabled]="checkNext()"
+    >
+      Next Candidate
+    </button></a
+  >
+</ul>

@@ -1,0 +1,33 @@
+<form #form="ngForm" class="form-group" (ngSubmit)="submit(form)">
+  <label for="name">Name:</label>
+  <input
+    required
+    class="form-control"
+    id="name"
+    name="name"
+    [(ngModel)]="form.name"
+    placeholder="Enter name"
+  />
+
+  <br /><br />
+
+  <label for="ID">ID:</label>
+  &nbsp; &nbsp;
+
+  <input
+    required
+    class="form-control"
+    id="ID"
+    name="ID_no"
+    [(ngModel)]="form.id"
+    placeholder="Enter id"
+  />
+
+  <br /><br />
+
+  <button nz-button nzType="primary" [disabled]="!form.valid">Submit</button>
+
+  <a routerLink="/candidate-list">
+    <button nz-button nzType="text">ViewList</button>
+  </a>
+</form>

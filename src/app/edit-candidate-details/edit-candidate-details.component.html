@@ -1,0 +1,38 @@
+<form
+  #updateForm="ngForm"
+  class="form-group"
+  (ngSubmit)="send_update(candidateModel.name, candidateModel.id)"
+>
+  <label for="name">Name:</label>
+  <input
+    required
+    class="form-control"
+    id="name"
+    name="name"
+    [(ngModel)]="candidateModel.name"
+    placeholder="enter name"
+  />
+
+  <br /><br />
+
+  <label for="ID">ID:</label>
+  &nbsp; &nbsp;
+
+  <input
+    required
+    class="form-control"
+    id="ID"
+    name="ID_no"
+    [(ngModel)]="candidateModel.id"
+    placeholder="enter id"
+  />
+
+  <br /><br />
+
+  <button nz-button nzType="primary" [disabled]="!updateForm.valid">
+    Update
+  </button>
+  <a routerLink="/candidate-list"
+    ><button nz-button nzType="text">ViewList</button></a
+  >
+</form>
