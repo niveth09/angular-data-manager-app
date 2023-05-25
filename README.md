@@ -1,0 +1,1 @@
+# angular-data-manager-app
